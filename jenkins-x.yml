@@ -1,1 +1,10 @@
 buildPack: go
+pipelineConfig:
+  pipelines:
+    pullRequest:
+      preBuild:
+        steps:
+        - container: busybox
+          command: echo
+          args:
+          - "WASSUP!!!" 
